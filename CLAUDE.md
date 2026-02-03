@@ -41,7 +41,7 @@ Each chart has a `ci/test-values.yaml` with minimal overrides used by CI for ins
 
 ### Releasing
 
-Releases are automated. Pushing to `master` triggers `.github/workflows/release.yaml`, which uses chart-releaser to publish OCI charts to `ghcr.io`.
+Releases are automated. Pushing to `master` triggers `.github/workflows/release.yaml`, which packages all charts and publishes them to the Gitea Helm registry at `git.farh.net`. Pushes to other branches run the package step without publishing.
 
 ## Architecture
 
