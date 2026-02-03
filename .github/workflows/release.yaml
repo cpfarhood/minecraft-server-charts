@@ -1,8 +1,7 @@
 name: Release Charts
 
 on:
-  release:
-    types: [published]
+  push:
 
 jobs:
   release:
@@ -37,6 +36,7 @@ jobs:
           done
 
       - name: Push Charts to Gitea Registry
+        if: github.ref == 'refs/heads/master'
         env:
           GITEA_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
