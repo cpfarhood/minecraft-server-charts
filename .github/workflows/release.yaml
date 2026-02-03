@@ -38,7 +38,7 @@ jobs:
       - name: Push Charts to Gitea Registry
         if: github.ref == 'refs/heads/master'
         env:
-          GITEA_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITEA_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
         run: |
           for pkg in .cr-release-packages/*.tgz; do
             if [ -e "$pkg" ]; then
