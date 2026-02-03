@@ -1,9 +1,8 @@
 name: Release Charts
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [published]
 
 jobs:
   release:
@@ -44,8 +43,14 @@ jobs:
           for pkg in .cr-release-packages/*.tgz; do
             if [ -e "$pkg" ]; then
               echo "Pushing $pkg..."
-              curl --user "${{ github.actor }}:${GITEA_TOKEN}" \
-                --upload-file "$pkg" \
-                https://git.farh.net/api/packages/farhoodliquor/helm/api/charts
+              response=$(curl -s -o /dev/null -w "%{http_code}" --user "${{ github.actor }}:${GITEA_TOKEN}" --upload-file "$pkg" https://git.farh.net/api/packages/farhoodliquor/helm/api/charts)
+              if [ "$response" -eq 201 ]; then
+                 echo "Successfully pushed $pkg"
+              elif [ "$response" -eq 409 ]; then
+                 echo "Package $pkg already exists, skipping."
+              else
+                 echo "Failed to push $pkg with status $response"
+                 exit 1
+              fi
             fi
           done
