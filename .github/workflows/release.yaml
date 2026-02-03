@@ -43,7 +43,7 @@ jobs:
           for pkg in .cr-release-packages/*.tgz; do
             if [ -e "$pkg" ]; then
               echo "Pushing $pkg..."
-              response=$(curl -s -o /dev/null -w "%{http_code}" --user "${{ github.actor }}:${GITEA_TOKEN}" --upload-file "$pkg" https://git.farh.net/api/packages/farhoodliquor/helm/api/charts)
+              response=$(curl -s -o /dev/null -w "%{http_code}" --user "${{ github.actor }}:${GITEA_TOKEN}" -X POST -F "chart=@$pkg" https://git.farh.net/api/packages/farhoodliquor/helm/api/charts)
               if [ "$response" -eq 201 ]; then
                  echo "Successfully pushed $pkg"
               elif [ "$response" -eq 409 ]; then
