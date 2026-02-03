@@ -5,17 +5,17 @@ appVersion: SeeValues
 home: https://minecraft.net/
 description: Minecraft server
 keywords:
-- game
-- server
+  - game
+  - server
 sources:
-- https://github.com/itzg/minecraft-server-charts
+  - https://git.farh.net/farhoodliquor/minecraft-server-charts
 maintainers:
-- name: gtaylor
-  email: gtaylor@gc-taylor.com
-- name: billimek
-  email: jeff@billimek.com
-- name: itzg
-  email: itzgeoff@gmail.com
+  - name: gtaylor
+    email: gtaylor@gc-taylor.com
+  - name: billimek
+    email: jeff@billimek.com
+  - name: itzg
+    email: itzgeoff@gmail.com
 annotations:
   artifacthub.io/links: |
     - name: Image source

@@ -8,7 +8,7 @@ keywords:
   - game
   - server
 sources:
-  - https://github.com/itzg/minecraft-server-charts
+  - https://git.farh.net/farhoodliquor/minecraft-server-charts
 maintainers:
   - name: gtaylor
     email: gtaylor@gc-taylor.com

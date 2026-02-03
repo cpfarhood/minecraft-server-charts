@@ -7,9 +7,9 @@ keywords:
   - proxy
   - game
   - server
-home: https://github.com/itzg/minecraft-server-charts
+home: https://git.farh.net/farhoodliquor/minecraft-server-charts
 sources:
-  - https://github.com/itzg/minecraft-server-charts
+  - https://git.farh.net/farhoodliquor/minecraft-server-charts/tree/master/charts/minecraft-proxy
 maintainers:
   - name: chipwolf
     email: hello@chipwolf.uk

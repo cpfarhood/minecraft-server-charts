@@ -3,13 +3,13 @@ name: mc-router
 version: 1.4.1
 # not used
 appVersion: 1.0.0
-home: https://github.com/itzg/mc-router
+home: https://git.farh.net/farhoodliquor/minecraft-server-charts
 description: Routes Minecraft client connections to backend servers based upon the requested server address.
 keywords:
   - minecraft
   - router
 sources:
-  - https://github.com/itzg/minecraft-server-charts
+  - https://git.farh.net/farhoodliquor/minecraft-server-charts/tree/master/charts/mc-router
 maintainers:
   - name: gtaylor
     email: gtaylor@gc-taylor.com
