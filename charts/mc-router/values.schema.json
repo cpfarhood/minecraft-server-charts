@@ -103,7 +103,7 @@
             "allowDeny": {
               "title": "Specify a server allow/deny list to restrict which players may trigger the scalers.",
               "$comment": "Update tag below and in values.yaml comment when this file changes",
-              "$ref": "https://raw.githubusercontent.com/itzg/mc-router/refs/tags/1.29.0/docs/allow-deny-list.schema.json"
+              "$ref": "https://git.farh.net/farhoodliquor/mc-router/raw/tag/1.29.0/docs/allow-deny-list.schema.json"
             }
           }
         },
