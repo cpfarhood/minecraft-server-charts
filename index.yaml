@@ -4,6 +4,37 @@ entries:
   - annotations:
       artifacthub.io/links: |
         - name: Image source
+          url: https://github.com/itzg/mc-router
+        - name: Image registry
+          url: https://ghcr.io/cpfarhood/mc-router
+    apiVersion: v1
+    appVersion: 1.0.0
+    created: "2026-02-25T01:02:46.479526111Z"
+    description: Routes Minecraft client connections to backend servers based upon
+      the requested server address.
+    digest: 78410728828af289b039450f63fed96efc4a433db9c86d01aeb0d29a612561ee
+    home: https://github.com/cpfarhood/minecraft-server-charts
+    keywords:
+    - minecraft
+    - router
+    maintainers:
+    - email: gtaylor@gc-taylor.com
+      name: gtaylor
+    - email: jeff@billimek.com
+      name: billimek
+    - email: itzgeoff@gmail.com
+      name: itzg
+    - email: yannik@carbongem.com
+      name: bibz87
+    name: mc-router
+    sources:
+    - https://github.com/cpfarhood/minecraft-server-charts/tree/master/charts/mc-router
+    urls:
+    - https://github.com/cpfarhood/minecraft-server-charts/releases/download/mc-router-1.6.1/mc-router-1.6.1.tgz
+    version: 1.6.1
+  - annotations:
+      artifacthub.io/links: |
+        - name: Image source
           url: https://git.farh.net/farhoodliquor/mc-router
         - name: Image registry
           url: https://git.farh.net/farhoodliquor/-/packages/container/mc-router
@@ -405,6 +436,36 @@ entries:
     - https://github.com/itzg/minecraft-server-charts/releases/download/mc-router-1.0.0/mc-router-1.0.0.tgz
     version: 1.0.0
   minecraft:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Image source
+          url: https://github.com/itzg/docker-minecraft-server
+        - name: Image DockerHub
+          url: https://hub.docker.com/r/itzg/minecraft-server
+    apiVersion: v1
+    appVersion: 1.20.1
+    created: "2026-02-25T01:02:46.661841208Z"
+    description: Minecraft server
+    digest: 2a651a58ca456b9a749aeedba52076fcd7a61f1815725d13bfe7c5b288b0b73f
+    home: https://minecraft.net/
+    keywords:
+    - game
+    - server
+    maintainers:
+    - email: gtaylor@gc-taylor.com
+      name: gtaylor
+    - email: jeff@billimek.com
+      name: billimek
+    - email: itzgeoff@gmail.com
+      name: itzg
+    - email: yannik@carbongem.com
+      name: bibz87
+    name: minecraft
+    sources:
+    - https://github.com/cpfarhood/minecraft-server-charts
+    urls:
+    - https://github.com/cpfarhood/minecraft-server-charts/releases/download/minecraft-5.2.1/minecraft-5.2.1.tgz
+    version: 5.2.1
   - annotations:
       artifacthub.io/links: |
         - name: Image source
@@ -3441,6 +3502,34 @@ entries:
         - name: Image DockerHub
           url: https://hub.docker.com/r/itzg/minecraft-bedrock-server
     apiVersion: v1
+    appVersion: 1.20.10.01
+    created: "2026-02-25T01:02:46.84224405Z"
+    description: Minecraft server
+    digest: 9106940c1ab0fb13cbb9f4d5c1782c32a7eb903a5cd5b25f1f514c09b0ab0681
+    home: https://minecraft.net/
+    keywords:
+    - game
+    - server
+    maintainers:
+    - email: gtaylor@gc-taylor.com
+      name: gtaylor
+    - email: jeff@billimek.com
+      name: billimek
+    - email: itzgeoff@gmail.com
+      name: itzg
+    name: minecraft-bedrock
+    sources:
+    - https://github.com/cpfarhood/minecraft-server-charts
+    urls:
+    - https://github.com/cpfarhood/minecraft-server-charts/releases/download/minecraft-bedrock-2.9.1/minecraft-bedrock-2.9.1.tgz
+    version: 2.9.1
+  - annotations:
+      artifacthub.io/links: |
+        - name: Image source
+          url: https://github.com/itzg/docker-minecraft-bedrock-server
+        - name: Image DockerHub
+          url: https://hub.docker.com/r/itzg/minecraft-bedrock-server
+    apiVersion: v1
     appVersion: SeeValues
     created: "2025-03-21T12:40:37.177818218Z"
     description: Minecraft server
@@ -4239,6 +4328,37 @@ entries:
     - https://github.com/itzg/minecraft-server-charts/releases/download/minecraft-bedrock-1.0.0/minecraft-bedrock-1.0.0.tgz
     version: 1.0.0
   minecraft-proxy:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Image source
+          url: https://github.com/itzg/docker-bungeecord
+        - name: Image DockerHub
+          url: https://hub.docker.com/r/itzg/bungeecord
+    apiVersion: v1
+    appVersion: SeeValues
+    created: "2026-02-25T01:02:47.023794403Z"
+    description: Minecraft proxy server (BungeeCord, Waterfall, Velocity, etc.)
+    digest: c5e67ee8c5cf0bf07895bae718bc0190f387bbc0c597c4e72498d864c09e85e1
+    home: https://github.com/cpfarhood/minecraft-server-charts
+    keywords:
+    - proxy
+    - game
+    - server
+    maintainers:
+    - email: hello@chipwolf.uk
+      name: chipwolf
+    - email: gtaylor@gc-taylor.com
+      name: gtaylor
+    - email: jeff@billimek.com
+      name: billimek
+    - email: itzgeoff@gmail.com
+      name: itzg
+    name: minecraft-proxy
+    sources:
+    - https://github.com/cpfarhood/minecraft-server-charts/tree/master/charts/minecraft-proxy
+    urls:
+    - https://github.com/cpfarhood/minecraft-server-charts/releases/download/minecraft-proxy-3.10.1/minecraft-proxy-3.10.1.tgz
+    version: 3.10.1
   - annotations:
       artifacthub.io/links: |
         - name: Image source
@@ -5054,6 +5174,31 @@ entries:
           url: https://hub.docker.com/r/itzg/rcon
     apiVersion: v2
     appVersion: 0.14.1-1
+    created: "2026-02-25T01:02:47.181978466Z"
+    description: RCon Web UI for managing game servers
+    digest: e4fa0d92ae721e58a1d12bc9bbdda1126cfeee033658ca245e0a637bde908f8b
+    home: https://github.com/rcon-web-admin/rcon-web-admin
+    keywords:
+    - game
+    - server
+    maintainers:
+    - email: eaglesemanation@gmail.com
+      name: eaglesemanation
+    name: rcon-web-admin
+    sources:
+    - https://github.com/cpfarhood/minecraft-server-charts
+    type: application
+    urls:
+    - https://github.com/cpfarhood/minecraft-server-charts/releases/download/rcon-web-admin-1.2.1/rcon-web-admin-1.2.1.tgz
+    version: 1.2.1
+  - annotations:
+      artifacthub.io/links: |
+        - name: Image source
+          url: https://github.com/itzg/docker-rcon-web-admin
+        - name: Image DockerHub
+          url: https://hub.docker.com/r/itzg/rcon
+    apiVersion: v2
+    appVersion: 0.14.1-1
     created: "2023-06-01T16:46:48.388057449Z"
     description: RCon Web UI for managing game servers
     digest: af112ee92eeafccf55a96ad5ef912ea46e710beb79f2edc8f6bb98002ff26768
@@ -5121,4 +5266,4 @@ entries:
     urls:
     - https://github.com/itzg/minecraft-server-charts/releases/download/rcon-web-admin-0.1.0/rcon-web-admin-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-25T00:45:45.575199149Z"
+generated: "2026-02-25T01:02:47.182713403Z"
