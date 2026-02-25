@@ -1,15 +1,15 @@
 apiVersion: v1
 name: mc-router
-version: 1.6.0
+version: 1.6.1
 # not used
 appVersion: 1.0.0
-home: https://git.farh.net/farhoodliquor/minecraft-server-charts
+home: https://github.com/cpfarhood/minecraft-server-charts
 description: Routes Minecraft client connections to backend servers based upon the requested server address.
 keywords:
   - minecraft
   - router
 sources:
-  - https://git.farh.net/farhoodliquor/minecraft-server-charts/tree/master/charts/mc-router
+  - https://github.com/cpfarhood/minecraft-server-charts/tree/master/charts/mc-router
 maintainers:
   - name: gtaylor
     email: gtaylor@gc-taylor.com
@@ -22,6 +22,6 @@ maintainers:
 annotations:
   artifacthub.io/links: |
     - name: Image source
-      url: https://git.farh.net/farhoodliquor/mc-router
+      url: https://github.com/itzg/mc-router
     - name: Image registry
-      url: https://git.farh.net/farhoodliquor/-/packages/container/mc-router
+      url: https://ghcr.io/cpfarhood/mc-router

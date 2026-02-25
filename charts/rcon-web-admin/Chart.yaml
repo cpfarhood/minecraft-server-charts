@@ -3,13 +3,13 @@ name: rcon-web-admin
 home: https://github.com/rcon-web-admin/rcon-web-admin
 description: RCon Web UI for managing game servers
 type: application
-version: 1.2.0
+version: 1.2.1
 appVersion: "0.14.1-1"
 keywords:
   - game
   - server
 sources:
-  - https://git.farh.net/farhoodliquor/minecraft-server-charts
+  - https://github.com/cpfarhood/minecraft-server-charts
 maintainers:
   - name: eaglesemanation
     email: eaglesemanation@gmail.com

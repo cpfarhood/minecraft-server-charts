@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: git.farh.net/farhoodliquor/mc-router
+  repository: ghcr.io/cpfarhood/mc-router
   tag: 1.40.0
   pullPolicy: IfNotPresent
 
@@ -160,7 +160,7 @@ minecraftRouter:
     configObject: Secret
     # Specify a server allow/deny list to restrict which players may trigger the scalers.
     # For more info on the schema, check out the file in `mc-router`
-    # https://git.farh.net/farhoodliquor/mc-router/blob/1.29.0/docs/allow-deny-list.schema.json
+    # https://github.com/itzg/mc-router/blob/1.29.0/docs/allow-deny-list.schema.json
     allowDeny: {}
       # global:
       #   denylist:

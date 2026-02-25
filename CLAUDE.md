@@ -41,7 +41,7 @@ Each chart has a `ci/test-values.yaml` with minimal overrides used by CI for ins
 
 ### Releasing
 
-Releases are automated. Pushing to `master` triggers `.github/workflows/release.yaml`, which packages all charts and publishes them to the Gitea Helm registry at `git.farh.net`. Pushes to other branches run the package step without publishing.
+Releases are automated. Pushing to `master` triggers `.github/workflows/release.yaml`, which uses `helm/chart-releaser-action` to package charts, create GitHub Releases, and publish to GitHub Pages at `https://cpfarhood.github.io/minecraft-server-charts`.
 
 ## Architecture
 
