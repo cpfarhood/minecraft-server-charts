@@ -2,10 +2,13 @@ name: Release Charts
 
 on:
   push:
+    branches:
+      - master
 
 jobs:
   release:
-    timeout-minutes: 5
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,7 +19,7 @@ jobs:
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@noreply.localhost"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       - name: Install Helm
         uses: azure/setup-helm@v4
@@ -26,31 +29,7 @@ jobs:
           helm repo add stable https://charts.helm.sh/stable
           helm repo update stable
 
-      - name: Package Charts
-        run: |
-          mkdir -p .cr-release-packages
-          for chart in charts/*; do
-            if [ -d "$chart" ]; then
-              helm package "$chart" --destination .cr-release-packages
-            fi
-          done
-
-      - name: Push Charts to Gitea Registry
-        if: github.ref == 'refs/heads/master'
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.7.0
         env:
-          GITEA_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
-        run: |
-          for pkg in .cr-release-packages/*.tgz; do
-            if [ -e "$pkg" ]; then
-              echo "Pushing $pkg..."
-              response=$(curl -s -o /dev/null -w "%{http_code}" --user "${{ github.actor }}:${GITEA_TOKEN}" -X POST -F "chart=@$pkg" https://git.farh.net/api/packages/farhoodliquor/helm/api/charts)
-              if [ "$response" -eq 201 ]; then
-                 echo "Successfully pushed $pkg"
-              elif [ "$response" -eq 409 ]; then
-                 echo "Package $pkg already exists, skipping."
-              else
-                 echo "Failed to push $pkg with status $response"
-                 exit 1
-              fi
-            fi
-          done
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
