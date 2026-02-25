@@ -4,6 +4,37 @@ entries:
   - annotations:
       artifacthub.io/links: |
         - name: Image source
+          url: https://git.farh.net/farhoodliquor/mc-router
+        - name: Image registry
+          url: https://git.farh.net/farhoodliquor/-/packages/container/mc-router
+    apiVersion: v1
+    appVersion: 1.0.0
+    created: "2026-02-25T00:45:45.574873181Z"
+    description: Routes Minecraft client connections to backend servers based upon
+      the requested server address.
+    digest: 5f27e45f68e79dc2a42d578c389e3daf514704e27d9047d4fb476ac58d556b7a
+    home: https://git.farh.net/farhoodliquor/minecraft-server-charts
+    keywords:
+    - minecraft
+    - router
+    maintainers:
+    - email: gtaylor@gc-taylor.com
+      name: gtaylor
+    - email: jeff@billimek.com
+      name: billimek
+    - email: itzgeoff@gmail.com
+      name: itzg
+    - email: yannik@carbongem.com
+      name: bibz87
+    name: mc-router
+    sources:
+    - https://git.farh.net/farhoodliquor/minecraft-server-charts/tree/master/charts/mc-router
+    urls:
+    - https://github.com/cpfarhood/minecraft-server-charts/releases/download/mc-router-1.6.0/mc-router-1.6.0.tgz
+    version: 1.6.0
+  - annotations:
+      artifacthub.io/links: |
+        - name: Image source
           url: https://github.com/itzg/mc-router
         - name: Image DockerHub
           url: https://hub.docker.com/r/itzg/mc-router
@@ -5090,4 +5121,4 @@ entries:
     urls:
     - https://github.com/itzg/minecraft-server-charts/releases/download/rcon-web-admin-0.1.0/rcon-web-admin-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-03T12:58:08.091708428Z"
+generated: "2026-02-25T00:45:45.575199149Z"
